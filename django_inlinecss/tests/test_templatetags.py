@@ -11,13 +11,12 @@ from django.test.utils import override_settings
 from django.conf import settings
 from django.utils.safestring import mark_safe
 
-from django.template import Context
 from django.template.loader import get_template
 
 from mock import patch
 
-from django_inlinecss.tests.constants import TESTS_TEMPLATE_DIR
-from django_inlinecss.tests.constants import TESTS_STATIC_DIR
+from .constants import TESTS_TEMPLATE_DIR
+from .constants import TESTS_STATIC_DIR
 
 
 templates_override = list(settings.TEMPLATES) + [TESTS_TEMPLATE_DIR]

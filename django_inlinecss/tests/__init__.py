@@ -1,1 +1,1 @@
-from django_inlinecss.tests.test_templatetags import *
+from .test_templatetags import *
