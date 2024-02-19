@@ -8,9 +8,7 @@ TEMPLATES = [
     }
 ]
 
-INSTALLED_APPS = (
-    "django_inlinecss",
-)
+INSTALLED_APPS = ("django_inlinecss",)
 
 DATABASES = {"default": {"ENGINE": "django.db.backends.sqlite3"}}
 

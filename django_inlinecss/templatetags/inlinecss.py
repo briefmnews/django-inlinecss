@@ -17,7 +17,7 @@ class InlineCssNode(template.Node):
 
     def render(self, context):
         rendered_contents = self.nodelist.render(context)
-        css = ''
+        css = ""
         for expression in self.filter_expressions:
             path = expression.resolve(context, True)
             if path is not None:
@@ -28,7 +28,7 @@ class InlineCssNode(template.Node):
                 expanded_path = staticfiles_storage.path(path)
 
             with open(expanded_path) as css_file:
-                css = ''.join((css, css_file.read()))
+                css = "".join((css, css_file.read()))
 
         engine = conf.get_engine()(html=rendered_contents, css=css)
         return engine.render()
@@ -36,13 +36,11 @@ class InlineCssNode(template.Node):
 
 @register.tag
 def inlinecss(parser, token):
-    nodelist = parser.parse(('endinlinecss',))
+    nodelist = parser.parse(("endinlinecss",))
 
     # prevent second parsing of endinlinecss
     parser.delete_first_token()
 
     args = token.split_contents()[1:]
 
-    return InlineCssNode(
-        nodelist,
-        [parser.compile_filter(arg) for arg in args])
+    return InlineCssNode(nodelist, [parser.compile_filter(arg) for arg in args])

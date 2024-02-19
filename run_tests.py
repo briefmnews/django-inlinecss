@@ -19,35 +19,42 @@ sys.path.insert(0, PROJECT_ROOT)
 def main():
     settings.configure(
         INSTALLED_APPS=[
-            'django.contrib.auth',
-            'django.contrib.contenttypes',
-            'django.contrib.sessions',
-            'django_inlinecss'
+            "django.contrib.auth",
+            "django.contrib.contenttypes",
+            "django.contrib.sessions",
+            "django_inlinecss",
         ],
         DATABASES={
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
+            "default": {
+                "ENGINE": "django.db.backends.sqlite3",
             }
         },
-        TEMPLATES = [{
-            'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [os.path.join(PROJECT_ROOT,"django_inlinecss","tests","templates"),],
-            'APP_DIRS': True,
-            'OPTIONS': {
-                'context_processors': [
-                    'django.template.context_processors.debug',
-                    'django.template.context_processors.request',
-                    'django.contrib.auth.context_processors.auth',
-                    'django.contrib.messages.context_processors.messages',
+        TEMPLATES=[
+            {
+                "BACKEND": "django.template.backends.django.DjangoTemplates",
+                "DIRS": [
+                    os.path.join(
+                        PROJECT_ROOT, "django_inlinecss", "tests", "templates"
+                    ),
                 ],
-            },
-        }],
-        STATIC_URL='/static/',
-        DEBUG=True
+                "APP_DIRS": True,
+                "OPTIONS": {
+                    "context_processors": [
+                        "django.template.context_processors.debug",
+                        "django.template.context_processors.request",
+                        "django.contrib.auth.context_processors.auth",
+                        "django.contrib.messages.context_processors.messages",
+                    ],
+                },
+            }
+        ],
+        STATIC_URL="/static/",
+        DEBUG=True,
     )
 
     django.setup()
-    call_command('test', 'django_inlinecss')
+    call_command("test", "django_inlinecss")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
