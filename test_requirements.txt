@@ -1,0 +1,8 @@
+black==24.2.0
+Django==4.2.10
+ipdb==0.13.13
+mock==5.1.0
+pytest==8.0.1
+pytest-cov==4.1.0
+pytest-django==4.8.0
+pynliner==0.8.0
