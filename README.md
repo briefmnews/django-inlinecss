@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/roverdotcom/django-inlinecss.png?branch=master)](https://travis-ci.org/roverdotcom/django-inlinecss)
+[![Python CI](https://github.com/briefmnews/django-inlinecss/actions/workflows/workflow.yml/badge.svg)](https://github.com/briefmnews/django-inlinecss/actions/workflows/workflow.yml)
 
 ## About
 
