@@ -7,3 +7,6 @@ dist/
 django_inlinecss.egg-info/
 venv/
 build/
+.python-version
+.pytest_cache
+.idea
