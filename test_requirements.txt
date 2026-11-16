@@ -1,5 +1,5 @@
 black==24.2.0
-Django==4.2.10
+Django==5.2.19
 ipdb==0.13.13
 mock==5.1.0
 pytest==8.0.1
